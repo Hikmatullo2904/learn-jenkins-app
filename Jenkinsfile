@@ -19,16 +19,10 @@ pipeline {
                 '''
             }
         }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
+        stage('Test') {
+            steps{
+                echo 'test is running...'
+            }
         }
     }
 }
